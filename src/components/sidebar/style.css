@@ -1,0 +1,60 @@
+.sidebar{
+    position:absolute;
+    top: 6.5%;
+    width:15%;
+    height:850px;
+    box-shadow:2px 2px 3px 5px #ccc;
+    box-sizing:border-box;
+    padding:20px 0px;
+    background:#333;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+.sidebar hr{
+  margin-top: 35px;
+  width: 100%;
+}
+.sidebar .menu a{
+  display:inline-block;
+  /*margin-bottom:10px;*/
+  font-size:1.2rem;
+  text-decoration:none;
+  color:white;
+}
+.sidebar .menu a:hover{
+  background: #1b1b1b;
+}
+.close-icon{
+  position:absolute;
+  right:15px;
+  top:10px;
+  text-decoration:none;
+  font-size:1.4rem;
+}
+.house-icon{
+  position:absolute;
+  left:15px;
+  top:10px;
+  text-decoration:none;
+  font-size:1.4rem;
+}
+.open-icon{
+  position:absolute;
+  left:0px;
+  top:10px;
+  text-decoration:none;
+  font-size:1.8rem;
+  font-weight:800;
+  padding:2px 5px;
+  box-shadow:1px 1px 1px 1px #ccc;
+}
+.hide{
+  transition:left 0.2s linear;
+  left:-15%;
+  position: absolute;
+
+}
+.show{
+  transition:left 0.2s linear;
+  left:1%;
+}

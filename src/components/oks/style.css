@@ -1,0 +1,25 @@
+.table-content{
+    position: inherit;
+    display: table;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.table_content_th{
+    background: #e0e0e0;
+}
+
+.input-content{
+    height: 100%;
+    width: 100%;
+    /*border: none;*/
+    background: #efefef;
+}
+
+.input-content input{
+    border: none;
+    background: #efefef;
+    /*height: 100%;*/
+    width: 100%;
+}

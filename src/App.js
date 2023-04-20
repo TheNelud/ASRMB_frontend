@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from "./components/navbar/Navbar"
+import Contents from "./pages/oks/Contents";
+import Sidebar from "./components/sidebar/Sidebar";
+import React from "react";
+import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
+import ContentP1 from "./pages/oks/pages/ContentP1";
+import ContentP2 from "./pages/oks/pages/ContentP2";
 
 function App() {
+    let [state_sidebar, setStateSidebar] = React.useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Router>
+            <Navbar setStateSidebar={setStateSidebar} />
+            <Sidebar state_sidebar={state_sidebar} setStateSidebar={setStateSidebar}/>
+            <Routes>
+                <Route path='/oks' element={<Contents />}/>
+                <Route path='/oks/p1' element={<ContentP1/>}/>
+                <Route path='/oks/p2' element={<ContentP2/>}/>
+            </Routes>
+        </Router>
     </div>
   );
 }
