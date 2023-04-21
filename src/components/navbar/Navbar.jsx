@@ -5,8 +5,7 @@ import {NavLink} from "react-router-dom";
 
 const Navbar = ({setStateSidebar}) => {
     return(
-
-            <ul>
+            <ul className='navbar-content'>
                 <li onClick={() => setStateSidebar(true)}><IconMenu /></li>
                 <li>
                     <div className="dropdown">
@@ -33,12 +32,7 @@ const Navbar = ({setStateSidebar}) => {
                         </div>
                     </div>
                 </li>
-
             </ul>
-
-
-
-
     )
 }
 

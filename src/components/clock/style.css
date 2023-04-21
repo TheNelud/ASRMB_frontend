@@ -1,6 +1,7 @@
 #timedate {
     font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-    text-align:left;
+    text-align:center;
+    font-size: 64px;
     width:28.2%;
     margin-top: 5px;
     color: #ffffff;
@@ -11,4 +12,5 @@
     position:absolute;
     top: 6.5%;
     box-shadow:2px 2px 3px 3px #ccc;
+    border-left: 3px solid #335efc;
   }

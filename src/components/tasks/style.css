@@ -1,0 +1,138 @@
+.tasks-content{
+    position:absolute;
+    display: block;
+    top: 6.5%;
+    width:53%;
+    height:90%;
+    box-shadow:2px 2px 3px 5px #ccc;
+    box-sizing:border-box;
+    margin-right: 70%;
+    margin-left: 17%;
+    background:#333;
+    border-radius: 10px;
+    margin-top: 5px;
+    border-left: 3px solid #335efc;
+    overflow-y: scroll;
+
+}
+.tasks-content::-webkit-scrollbar {
+  width: 5px;               /* ширина scrollbar */
+}
+.tasks-content::-webkit-scrollbar-track {
+  background: #333;        /* цвет дорожки */
+}
+.tasks-content::-webkit-scrollbar-thumb {
+  background-color: #a1a1a1;    /* цвет плашки */
+  border-radius: 3px;       /* закругления плашки */
+  border: 3px solid #a1a1a1;  /* padding вокруг плашки */
+}
+
+/*Tree tasks*/
+
+.tree{
+    --spacing : 1.5rem;
+    --radius  : 10px;
+    position: absolute;
+    height: 90%;
+  }
+
+  .tree li{
+    display      : block;
+    position     : relative;
+    color: #ffffff;
+    width: 100%;
+    padding-left : calc(2 * var(--spacing) - var(--radius) - 2px);
+  }
+
+  .tree ul{
+    margin-left  : calc(var(--radius) - var(--spacing));
+    padding-left : 0;
+  }
+
+  .tree ul li{
+    border-left : 2px solid #ddd;
+  }
+
+  .tree ul li:last-child{
+    border-color : transparent;
+  }
+
+  .tree ul li::before{
+    content      : '';
+    display      : block;
+    position     : absolute;
+    top          : calc(var(--spacing) / -2);
+    left         : -2px;
+    width        : calc(var(--spacing) + 2px);
+    height       : calc(var(--spacing) + 1px);
+    border       : solid #ddd;
+    border-width : 0 0 2px 2px;
+  }
+
+  .tree summary{
+    display : block;
+    cursor  : pointer;
+  }
+
+  .tree summary::marker,
+  .tree summary::-webkit-details-marker{
+    display : none;
+  }
+
+  .tree summary:focus{
+    outline : none;
+  }
+
+  .tree summary:focus-visible{
+    outline : 1px dotted #000;
+  }
+
+  .check_circle_oks
+  /*.check_circle_raport_day,*/
+  /*.check_circle_raport_month*/
+  {
+    position      : relative;
+    left          : -10px;
+    background    : #f64242;
+    border: #000000;
+    border-radius: 10px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .tree summary::before{
+    content       : '';
+    display       : block;
+    position      : absolute;
+    top           : calc(var(--spacing) / 2 - var(--radius));
+    left          : calc(var(--spacing) - var(--radius) - 1px);
+    width         : calc(2 * var(--radius));
+    height        : calc(2 * var(--radius));
+    border-radius : 50%;
+    background    : #ddd;
+  }
+
+  .tree summary::before{
+    content     : '+';
+    z-index     : 1;
+    background  : #335efc;
+    color       : #ffffff;
+    line-height : calc(2 * var(--radius) - 2px);
+    text-align  : center;
+  }
+
+  .tree details[open] > summary::before{
+    content : '−';
+  }
+
+
+  .tasks-text{
+    display: contents;
+    /*position: absolute;*/
+    width: 100px;
+    height: 10px;
+    /*left: 0px;*/
+    /*right: 0px;*/
+    /*top:0px;*/
+    /*bottom: 0px;*/
+
+  }

@@ -6,7 +6,7 @@ function TableItems({ key, items, title_table}) {
           <table className='table-content'>
                 <thead>
                     <tr>
-                      <th className="table_content_th" colSpan="6">Определение компонентного состава конденсата
+                      <th className="table_content_th_header" colSpan="6">Определение компонентного состава конденсата
                           нестабильного
                       </th>
                     </tr>
@@ -35,7 +35,9 @@ function TableItems({ key, items, title_table}) {
                               <td className='input-content'><input defaultValue={item.calculated_mass}/></td>
                           </tr>)
                     })}
-
+                        <tr>
+                            <td className='input-content-footer' colSpan={6}><span> </span></td>
+                        </tr>
                     </tbody>
           </table>
         

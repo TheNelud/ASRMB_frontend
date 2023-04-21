@@ -1,0 +1,53 @@
+#calendar {
+    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+    font-size: 44px;
+    width:28.2%;
+    margin-top: 8.5%;
+    /*color: #ffffff;*/
+    padding: 20px;
+    left: 70.75%;
+    background: #333;
+    border-radius: 10px;
+    position:absolute;
+    top: 6.5%;
+    box-shadow:2px 2px 3px 3px #ccc;
+    border-left: 3px solid #335efc;
+  }
+
+.react-calendar__month-view{
+    color: #335efc;
+}
+/*Верхняя строка отображение месяца и кнопки*/
+.react-calendar__navigation__arrow, .react-calendar__navigation__prev2-button,
+.react-calendar__navigation__arrow, .react-calendar__navigation__prev-button,
+.react-calendar__navigation__label, .react-calendar__navigation__arrow,
+.react-calendar__navigation__next-button,react-calendar__navigation__arrow,
+.react-calendar__navigation__next2-button,
+.react-calendar__navigation__label__labelText,
+.react-calendar__navigation__label__labelText--from
+{
+    color: #ffffff;
+    background: #333;
+    border: none;
+}
+/*Таблица дней*/
+.react-calendar__tile,
+.react-calendar__month-view__days__day,
+.react-calendar__month-view__days__day--neighboringMonth{
+    color: #ffffff;
+    background: #333;
+    border: none;
+}
+/*Активный день*/
+.react-calendar__tile--now,
+.react-calendar__tile--active,
+.react-calendar__tile--range ,
+.react-calendar__tile--rangeStart ,
+.react-calendar__tile--rangeEnd ,
+.react-calendar__tile--rangeBothEnds
+{
+    background: #ffffff;
+    color: #1b1b1b;
+    border-radius: 10px ;
+}

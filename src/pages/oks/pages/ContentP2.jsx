@@ -1,5 +1,6 @@
 import React from 'react'
-import TableItems from "../../../components/oks/TableItems";
+import TableItems from "../../../components/oks/table/TableItems";
+import Dock from "../../../components/oks/dock/Dock";
 // import './style.css';
 
 const ContentP2 = () => {
@@ -24,6 +25,7 @@ const ContentP2 = () => {
 
         <div className="conteiner-content">
             <TableItems key={items_p2.id} items={items_p2} title_table={title_table[0]}/>
+            <Dock/>
         </div>
     )
 }

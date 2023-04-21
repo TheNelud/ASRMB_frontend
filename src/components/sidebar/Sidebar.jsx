@@ -14,15 +14,19 @@ const Sidebar = ({state_sidebar, setStateSidebar}) => {
                 <IconClose className='close-icon' href='#' onClick={() => setStateSidebar(false)}/>
                 <NavLink to='/'><IconHome className='house-icon'/></NavLink>
                 <hr/>
-                {/*<div className='menu'>*/}
-
                     <Routes>
                         <Route path='/oks' element={<SidebarOks/>}/>
                         <Route path='/oks/p1' element={<SidebarOks/>}/>
                         <Route path='/oks/p2' element={<SidebarOks/>}/>
+                        <Route path='/oks/p3' element={<SidebarOks/>}/>
+                        <Route path='/oks/p4' element={<SidebarOks/>}/>
+                        <Route path='/oks/p5' element={<SidebarOks/>}/>
+                        <Route path='/oks/p6' element={<SidebarOks/>}/>
+                        <Route path='/oks/p7' element={<SidebarOks/>}/>
+                        <Route path='/oks/p8' element={<SidebarOks/>}/>
+                        <Route path='/oks/p9' element={<SidebarOks/>}/>
+                        <Route path='/oks/p10' element={<SidebarOks/>}/>
                     </Routes>
-
-                {/*</div>*/}
             </div>
         </>
     )

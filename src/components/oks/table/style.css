@@ -1,0 +1,35 @@
+.table-content{
+    margin-top: 1%;
+    position: inherit;
+    display: table;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.table_content_th_header{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: #e0e0e0;
+}
+
+.table_content_th{
+    background: #e0e0e0;
+}
+
+.input-content{
+    background: #efefef;
+}
+
+.input-content input{
+    border: none;
+    background: #efefef;
+}
+
+.input-content-footer{
+    height: 5px;
+    background: #dad9d9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: -200px;
+}

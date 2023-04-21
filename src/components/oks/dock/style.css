@@ -1,0 +1,47 @@
+.dockpanel{
+    position: absolute;
+    width: 30%;
+    background-color: #333;
+    top:2px;
+    left:68.5%;
+    /*margin-top: 1%;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*box-shadow:0px 3px 0px 0px #ccc;*/
+    /*border-radius: 10px;*/
+}
+
+.dockpanel .btnFunc {
+    background-color: #333; /* Green background */
+    color: white; /* White text */
+    padding: 9px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+}
+
+.fetchDate{
+    margin: 5px 5px 5px 5px;
+    font-size: 19px;
+    font-family: inherit;
+    padding: 0.4em 2.5em;
+    background-color: #fff;
+    border: 0px solid;
+    border-radius: 10px;
+    transition: 180ms box-shadow ease-in-out
+}
+
+/* Clear floats (clearfix hack) */
+.dockpanel:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.dockpanel .btnFunc:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.dockpanel .btnFunc:hover {
+    background-color: #3e8e41;
+}

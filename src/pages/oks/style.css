@@ -1,4 +1,28 @@
-.conteiner-content{
-/*    display: inline-block;*/
-/*    overflow-y: scroll;*/
+.menu{
+    position:absolute;
+    display: block;
+    height: 90%;
+    overflow-y: scroll;
+}
+.menu::-webkit-scrollbar {
+  width: 6px;               /* ширина scrollbar */
+}
+.menu::-webkit-scrollbar-track {
+  background: #333;        /* цвет дорожки */
+}
+.menu::-webkit-scrollbar-thumb {
+  background-color: #a1a1a1;    /* цвет плашки */
+  border-radius: 3px;       /* закругления плашки */
+  border: 3px solid #a1a1a1;  /* padding вокруг плашки */
+}
+
+.icon-table{
+    display: block;
+    /*position: absolute;*/
+    /*top: -1.6%;*/
+    /*margin-left: 45%;*/
+    /*margin-right: 55%;*/
+}
+.link-text{
+    font-size: 14px;
 }
