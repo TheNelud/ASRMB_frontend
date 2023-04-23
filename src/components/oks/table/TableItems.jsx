@@ -2,7 +2,8 @@ import React from 'react'
 import './style.css'
 // import {Link} from 'react-router-dom'
 function TableItems({ key, items, title_table}) {
-    return (
+
+    return(
           <table className='table-content'>
                 <thead>
                     <tr>
@@ -24,15 +25,33 @@ function TableItems({ key, items, title_table}) {
                     </thead>
                     <tbody>
 
-                    {items.map((item, index) => {
+                    {items.map((item, key) => {
                          return(
-                          <tr key={index}>
-                              <td className='input-content'><input defaultValue={item.name}/></td>
-                              <td className='input-content'><input defaultValue={item.molar_content_of_components}/></td>
-                              <td className='input-content'><input defaultValue={item.molar_mass_of_the_component}/></td>
-                              <td className='input-content'><input defaultValue={item.total_molar_mass}/></td>
-                              <td className='input-content'><input defaultValue={item.chromatograph_mass}/></td>
-                              <td className='input-content'><input defaultValue={item.calculated_mass}/></td>
+                          <tr key={key}>
+                              <td className='input-content'><input
+                                  onChange={(e) => {item['name'] = e.target.value}}
+                                  defaultValue={item.name}/>
+                              </td>
+                              <td className='input-content'><input
+                                  onChange={(e) => {item['molar_content_of_components'] = e.target.value}}
+                                  defaultValue={item.molar_content_of_components}/>
+                              </td>
+                              <td className='input-content'><input
+                                  onChange={(e) => {item['molar_mass_of_the_component'] = e.target.value}}
+                                  defaultValue={item.molar_mass_of_the_component}/>
+                              </td>
+                              <td className='input-content'><input
+                                  onChange={(e) => {item['total_molar_mass'] = e.target.value}}
+                                  defaultValue={item.total_molar_mass}/>
+                              </td>
+                              <td className='input-content'><input
+                                  onChange={(e) => {item['chromatograph_mass'] = e.target.value}}
+                                  defaultValue={item.chromatograph_mass}/>
+                              </td>
+                              <td className='input-content'><input
+                                  onChange={(e) => {item['calculated_mass'] = e.target.value}}
+                                  defaultValue={item.calculated_mass}/>
+                              </td>
                           </tr>)
                     })}
                         <tr>
