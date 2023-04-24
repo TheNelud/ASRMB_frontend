@@ -1,6 +1,7 @@
 import React from 'react'
 import TableItems from "../../../components/oks/table/TableItems";
 import Dock from "../../../components/oks/dock/Dock";
+import Plotly from "../../../components/oks/plotly/Plotly";
 // import TableDataSheet from "../../../components/oks/table/TableDataSheet";
 
 
@@ -32,7 +33,6 @@ const ContentP1 = () => {
         })
         let data = await response.json()
         setItems_p1(data)
-
     }
 
     let createItemsP1 = async (date_filter) => {
@@ -58,9 +58,7 @@ const ContentP1 = () => {
             },
             body: JSON.stringify({'id': 'create_data', create_items_p1})
         })
-        filterDate(date_filter)
-        // setItems_p1(create_items_p1)
-
+        await filterDate(date_filter)
     }
 
     let updateItemsP1 = async () => {
@@ -72,16 +70,33 @@ const ContentP1 = () => {
         body: JSON.stringify(items_p1)
       })
     }
+
+    let deleteItemsP1 = async (date_filter) => {
+        fetch(`/oks/p1/api/`, {
+             method: "DELETE",
+            'headers':{
+            'Content-Type':'application/json'
+            },
+            body: JSON.stringify(items_p1)
+        })
+        setItems_p1(items_p1 = [])
+    }
+
     console.log(items_p1)
+
     return(
 
         <div className="conteiner-content">
+
             <TableItems key={items_p1.id} items={items_p1} setItems_p1={setItems_p1} title_table={title_table[0]} />
-            <Dock click_filter={filterDate} click_save={updateItemsP1} click_create={createItemsP1}/>
+
+
+            <Dock click_filter={filterDate} click_save={updateItemsP1} click_create={createItemsP1} click_delete={deleteItemsP1}/>
+
         </div>
     )
 }
 
 export default ContentP1
 
-Array(0)
+
