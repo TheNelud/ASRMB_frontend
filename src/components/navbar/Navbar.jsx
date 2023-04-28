@@ -26,7 +26,7 @@ const Navbar = ({setStateSidebar}) => {
                     <div className='dropdown'>
                         <a href="#" className="text dropbtn">Отчеты</a>
                         <div className="dropdown-content">
-                            <a href="#">Суточный рапорт УКПГ</a>
+                            <NavLink to="/sar">Суточный рапорт УКПГ</NavLink>
                             <a href="#">Ежемесячный эксплуатационный рапорт</a>
                             <a href="#">Материальный баланс МЭГ</a>
                         </div>

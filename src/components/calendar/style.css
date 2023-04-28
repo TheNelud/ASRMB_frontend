@@ -1,7 +1,7 @@
 #calendar {
     font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     text-align:center;
-    font-size: 44px;
+    font-size: 28px;
     width:28.2%;
     margin-top: 8.5%;
     /*color: #ffffff;*/
@@ -10,7 +10,7 @@
     background: #333;
     border-radius: 10px;
     position:absolute;
-    top: 6.5%;
+    top: 15.5%;
     box-shadow:2px 2px 3px 3px #ccc;
     border-left: 3px solid #335efc;
   }

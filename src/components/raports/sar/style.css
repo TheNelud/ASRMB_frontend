@@ -1,14 +1,18 @@
-.table-content{
+.table-content-sar{
     margin-top: 1%;
     position: inherit;
     display: table;
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 
 }
-.table_content_th_header{
+.table_content_th_header_left{
     border-top-left-radius: 10px;
+    background: #e0e0e0;
+}
+
+.table_content_th_header_right{
     border-top-right-radius: 10px;
     background: #e0e0e0;
 }
@@ -17,14 +21,15 @@
     background: #e0e0e0;
 }
 
-.input-content{
+.table-content-td{
     background: #efefef;
 }
 
-.input-content input{
+.input-content{
     border: none;
     background: #efefef;
 }
+
 
 .input-content-footer{
     height: 5px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import TableItems from "../../../components/oks/table/TableItems";
-import Dock from "../../../components/oks/dock/Dock";
+import Dock from "../../../components/dock/Dock";
 // import './style.css';
 
 const ContentP5 = () => {

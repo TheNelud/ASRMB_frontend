@@ -2,12 +2,12 @@
     position:absolute;
     display: block;
     top: 6.5%;
-    width:53%;
+    width:68%;
     height:90%;
     box-shadow:2px 2px 3px 5px #ccc;
     box-sizing:border-box;
     margin-right: 70%;
-    margin-left: 17%;
+    margin-left: 1%;
     background:#333;
     border-radius: 10px;
     margin-top: 5px;
@@ -51,6 +51,7 @@
 
   .tree ul li{
     border-left : 2px solid #ddd;
+    margin-bottom: 4px;
   }
 
   .tree ul li:last-child{
@@ -88,12 +89,11 @@
   }
 
   .check_circle_oks
-  /*.check_circle_raport_day,*/
-  /*.check_circle_raport_month*/
   {
     position      : relative;
     left          : -10px;
-    background    : #f64242;
+    background: linear-gradient(90deg, rgba(138,0,0,1) 0%, rgba(255,59,59,1) 49%, rgba(144,0,0,1) 100%);
+    /*background: linear-gradient(90deg, rgba(8,121,2,1) 0%, rgba(79,255,59,1) 49%, rgba(10,115,0,1) 100%);*/
     border: #000000;
     border-radius: 10px;
     padding: 0px 0px 0px 0px;

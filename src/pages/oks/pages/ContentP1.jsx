@@ -1,6 +1,6 @@
 import React from 'react'
 import TableItems from "../../../components/oks/table/TableItems";
-import Dock from "../../../components/oks/dock/Dock";
+import Dock from "../../../components/dock/Dock";
 import Plotly from "../../../components/oks/plotly/Plotly";
 // import TableDataSheet from "../../../components/oks/table/TableDataSheet";
 
@@ -18,6 +18,12 @@ const ContentP1 = () => {
 
     let getItemsP1 = async () => {
         let response = await fetch('/oks/p1/api/')
+            .then(response=>{
+                if(!response.ok) throw new Error(`Ошибка: ${response.status}`)
+                return response.json()
+            })
+            .then(data => console.log(data))
+            .catch(error => console.error(error.message))
         let data = await response.json()
         setItems_p1(data)
     }
@@ -89,8 +95,6 @@ const ContentP1 = () => {
         <div className="conteiner-content">
 
             <TableItems key={items_p1.id} items={items_p1} setItems_p1={setItems_p1} title_table={title_table[0]} />
-
-
             <Dock click_filter={filterDate} click_save={updateItemsP1} click_create={createItemsP1} click_delete={deleteItemsP1}/>
 
         </div>
