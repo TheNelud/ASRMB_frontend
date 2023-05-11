@@ -17,7 +17,8 @@ import ContentP7 from "./pages/oks/pages/ContentP7";
 import ContentP8 from "./pages/oks/pages/ContentP8";
 import ContentP9 from "./pages/oks/pages/ContentP9";
 import ContentP10 from "./pages/oks/pages/ContentP10";
-import Sar from "./pages/raports/Sar";
+import Sar from "./pages/sar/Sar";
+import Mar from "./pages/mar/Mar";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                 <Route path='/oks/p10' element={<ContentP10/>}/>
 
                 <Route path='/sar' element={<Sar/>}/>
+                <Route path='/mar' element={<Mar/>}/>
             </Routes>
         </Router>
     </div>

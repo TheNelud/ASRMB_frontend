@@ -26,3 +26,22 @@
 .link-text{
     font-size: 14px;
 }
+
+/*All conteiner*/
+.conteiner_all{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.conteiner_p{
+    border: 3px solid #666;
+    background-color: #ddd;
+    border-radius: .5em;
+    padding: 15px;
+    cursor: move;
+}
+.conteiner_p.over {
+    border: 3px dotted #666;
+}
+

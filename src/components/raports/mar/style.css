@@ -1,0 +1,14 @@
+.table-content-mar{
+    font-size: 12px;
+    margin-top: 1%;
+    position: inherit;
+    display: table;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.table-content-body{
+    height: 80%;
+    display: block;
+    overflow-y: scroll;
+}
