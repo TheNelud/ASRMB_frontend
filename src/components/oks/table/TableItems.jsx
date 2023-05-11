@@ -129,7 +129,7 @@ function TableItems({ items, title_table}) {
                 </tbody>
             </table>
 
-            <Plotly values={items}/>
+            {/*<Plotly values={items}/>*/}
 
         </div>
   )

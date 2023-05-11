@@ -25,7 +25,7 @@ const ContentP6 = () => {
 
         <div className="conteiner-content">
             <TableItems key={items_p6.id} items={items_p6} title_table={title_table[0]}/>
-            <Dock/>
+            {/*<Dock/>*/}
         </div>
     )
 }
