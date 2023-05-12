@@ -19,12 +19,12 @@
   width: 5px;               /* ширина scrollbar */
 }
 .tasks-content::-webkit-scrollbar-track {
-  background: #333;        /* цвет дорожки */
+  background: #1f3eff;        /* цвет дорожки */
 }
 .tasks-content::-webkit-scrollbar-thumb {
-  background-color: #a1a1a1;    /* цвет плашки */
+  background-color: #1f3eff;    /* цвет плашки */
   border-radius: 3px;       /* закругления плашки */
-  border: 3px solid #a1a1a1;  /* padding вокруг плашки */
+  border: 3px solid #1f3eff;  /* padding вокруг плашки */
 }
 
 /*Tree tasks*/

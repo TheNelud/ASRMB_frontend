@@ -29,16 +29,33 @@
 
 /*All conteiner*/
 .conteiner_all{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    position: absolute !important;
+    display: block;
+    width: 98%;
+    height: 90%;
+    margin: 10px 20px ;
+    
+    float: left !important;
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.conteiner_all::-webkit-scrollbar {
+  width: 5px;               /* ширина scrollbar */
+}
+.conteiner_all::-webkit-scrollbar-track {
+  background: #333;        /* цвет дорожки */
+}
+.conteiner_all::-webkit-scrollbar-thumb {
+  background-color: #a1a1a1;    /* цвет плашки */
+  border-radius: 3px;       /* закругления плашки */
+  border: 3px solid #a1a1a1;  /* padding вокруг плашки */
 }
 
 .conteiner_p{
-    border: 3px solid #666;
-    background-color: #ddd;
-    border-radius: .5em;
-    padding: 15px;
+    display: block;
+    width: 50%;
     cursor: move;
 }
 .conteiner_p.over {
