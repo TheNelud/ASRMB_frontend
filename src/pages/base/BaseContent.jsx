@@ -3,7 +3,7 @@ import './style.css'
 import Clock from "../../components/clock/Clock";
 import Tasks from "../../components/tasks/Tasks";
 import CalendarM from "../../components/calendar/CalendarM";
-import Personal from "../../components/personal/Personal";
+
 
 
 const BaseContent = () => {
@@ -13,7 +13,6 @@ const BaseContent = () => {
             <Clock/>
             <Tasks/>
             <CalendarM/>
-            <Personal/>
         </div>
     )
 }

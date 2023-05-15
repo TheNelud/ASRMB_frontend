@@ -7,10 +7,10 @@
     box-shadow:2px 2px 3px 5px #ccc;
     box-sizing:border-box;
     padding:20px 0px;
-    background:#333;
+    background: #7a7a7a;
     border-radius: 10px;
     margin-top: 5px;
-    border-left: 3px solid #335efc;
+    border-left: 6px solid #335efc;
     z-index: 2;
   }
 .sidebar hr{
@@ -25,7 +25,7 @@
   color:white;
 }
 .sidebar .menu a:hover{
-  background: #1b1b1b;
+  background: #606060;
 }
 .close-icon{
   position:absolute;

@@ -19,6 +19,7 @@ import ContentP9 from "./pages/oks/pages/ContentP9";
 import ContentP10 from "./pages/oks/pages/ContentP10";
 import Sar from "./pages/sar/Sar";
 import Mar from "./pages/mar/Mar";
+import Mag from "./pages/mag/Mag";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
             <Sidebar state_sidebar={state_sidebar} setStateSidebar={setStateSidebar}/>
             <Routes>
                 <Route path='/' element= {<BaseContent/>}/>
-                <Route path='/oks' element={<Contents_OKS />}/>
+                <Route path='/oks' element={<Contents_OKS/>}/>
                 <Route path='/oks/p1' element={<ContentP1/>}/>
                 <Route path='/oks/p2' element={<ContentP2/>}/>
                 <Route path='/oks/p3' element={<ContentP3/>}/>
@@ -45,6 +46,8 @@ function App() {
 
                 <Route path='/sar' element={<Sar/>}/>
                 <Route path='/mar' element={<Mar/>}/>
+                <Route path='/mag' element={<Mag/>}/>
+
             </Routes>
         </Router>
     </div>

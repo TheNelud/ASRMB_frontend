@@ -1,0 +1,32 @@
+.title-mnemo-shema-mag{
+    position: absolute;
+    right: 60%;
+    left: 40%;
+    top:8%;
+    width: 95%;
+}
+
+.mnemo-shema-mag{
+    position: absolute;
+    display: block;
+    /*top: 3%;*/
+    left:2%;
+    width: 80%;
+    height: 95%;
+}
+.sett-mnemo-shema-mag{
+    position: absolute;
+    top:8%;
+    right: 1%;
+}
+.img-sett{
+    user-select: none;
+}
+
+
+.hover-mouse{
+    position: absolute;
+    display: block;
+    border-color: #fd2727;
+    border: 13px solid
+}

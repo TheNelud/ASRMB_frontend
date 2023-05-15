@@ -7,16 +7,16 @@
     /*color: #ffffff;*/
     padding: 20px;
     left: 70.75%;
-    background: #333;
+    background: #7a7a7a;
     border-radius: 10px;
     position:absolute;
-    top: 15.5%;
+    /*top: 15.5%;*/
     box-shadow:2px 2px 3px 3px #ccc;
     border-left: 3px solid #335efc;
   }
 
 .react-calendar__month-view{
-    color: #335efc;
+    color: #1f3894;
 }
 /*Верхняя строка отображение месяца и кнопки*/
 .react-calendar__navigation__arrow, .react-calendar__navigation__prev2-button,
@@ -28,7 +28,7 @@
 .react-calendar__navigation__label__labelText--from
 {
     color: #ffffff;
-    background: #333;
+    background: #7a7a7a;
     border: none;
 }
 /*Таблица дней*/
@@ -36,7 +36,7 @@
 .react-calendar__month-view__days__day,
 .react-calendar__month-view__days__day--neighboringMonth{
     color: #ffffff;
-    background: #333;
+    background: #7a7a7a;
     border: none;
 }
 /*Активный день*/

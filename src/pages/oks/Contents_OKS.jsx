@@ -110,18 +110,17 @@ const Contents_OKS = () => {
     let [items_p9, setItems_p9] = React.useState([])
     let [items_p10, setItems_p10] = React.useState([])
     let title_table = [
-        '№1 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№2 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№3 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№4 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№5 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№6 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№7 10С-1№6  протокол № 05 - PVT(Г) от',
+        'Протокол анализа №09-2021 PVT(К)',
+        'протокол № 05 - PVT(Г)',
+        'п.34 паспорт качества №3',
+        'протокол № 07-PVT(Г)',
+        'протокол № 06 - PVT(Г)',
+        'выход газа п.35 ПРОТОКОЛ №08 - PVT(Г)',
+        '10С-4№2',
         '№8 10С-1№6  протокол № 05 - PVT(Г) от',
         '№9 10С-1№6  протокол № 05 - PVT(Г) от',
-        '№10 10С-1№6  протокол № 05 - PVT(Г) от'
+        'КГН Протокол 09-2021 PVT (К)'
     ]
-
 
     const get_full_oks =async () => {
         let response = await fetch('/oks/full/api/')
@@ -137,7 +136,6 @@ const Contents_OKS = () => {
         setItems_p9(data['oks_p9'])
         setItems_p10(data['oks_p10'])
     }
-
 
     return(
         <div className="conteiner-content">

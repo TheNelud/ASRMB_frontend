@@ -1,17 +1,19 @@
 /*Navbar*/
 .navbar-content {
+    /*position: absolute;*/
     list-style-type: none;
     margin-top: 2px;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #7a7a7a;
     border-radius: 10px;
     width: 98%;
     height: 50px;
-    border-left: 3px solid #335efc;
+    border-left: 6px solid #335efc;
     box-shadow:2px 2px 3px 3px #ccc;
+    z-index: 5;
 
 }
 
@@ -28,7 +30,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #7a7a7a;
 }
 
 
@@ -43,8 +45,8 @@ li a:hover {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 2;
+    box-shadow: 0px 8px 16px 0px rgba(103, 103, 103, 0.2);
+    z-index: 55;
 }
 
 .dropdown-content a {
@@ -54,12 +56,37 @@ li a:hover {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-
+.dropdown-content a:hover {
+    background-color: #ddd;
 
 }
 
-.dropdown:hover .dropbtn {background-color: #111;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #606060;
+}
+
+.dropdown:hover .chevron{
+    transform: rotate(-180deg);
+    transition: 0.2s;
+}
+
+
+/*Personal navbar*/
+
+.nav-personal{
+    border-left: 3px solid #ffffff;
+    position: fixed;
+    right: 1%;
+    width: 20%;
+    z-index: 15;
+}
+
+.nav-personal-a{
+    padding: 4px 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}

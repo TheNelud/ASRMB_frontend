@@ -2,6 +2,10 @@ import React from 'react'
 import './style.css'
 import {ReactComponent as IconMenu} from "./assets/icon_menu.svg";
 import {NavLink} from "react-router-dom";
+import Personal from "../personal/Personal";
+import {ReactComponent as IconUser} from "./assets/icon-user.svg";
+import {ReactComponent as IconChevron} from "./assets/chevron.svg";
+
 
 const Navbar = ({setStateSidebar}) => {
     return(
@@ -20,7 +24,7 @@ const Navbar = ({setStateSidebar}) => {
                     </div>
                 </li>
 
-                <li><a className="text" href="#">Суточный рапорт Киринского ГКМ</a></li>
+                <li><NavLink to='/srk' >Суточный рапорт Киринского ГКМ</NavLink></li>
 
                 <li>
                     <div className='dropdown'>
@@ -28,7 +32,20 @@ const Navbar = ({setStateSidebar}) => {
                         <div className="dropdown-content">
                             <NavLink to="/sar">Суточный рапорт УКПГ</NavLink>
                             <NavLink to="/mar">Ежемесячный эксплуатационный рапорт</NavLink>
-                            <a href="#">Материальный баланс МЭГ</a>
+                            <NavLink to="/mag">Материальный баланс МЭГ</NavLink>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div className='dropdown nav-personal'>
+                        <a href='#' className='text dropbtn nav-personal-a'>
+                            <IconUser/>
+                            <label className='nav-name-personal'>Родованов П.В.</label>
+                            <IconChevron className='chevron'/>
+                        </a>
+                        <div className="dropdown-content">
+                            <Personal/>
                         </div>
                     </div>
                 </li>
