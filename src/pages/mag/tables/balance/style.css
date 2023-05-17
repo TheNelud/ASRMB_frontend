@@ -1,0 +1,32 @@
+.table-balance-modal{
+    position: absolute;
+    width: 72%;
+    height: 800px;
+    background: rgba(129, 129, 129, 0.95);
+    top: 7%;
+    right: 27%;
+    font-size: 13px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow:2px 2px 3px 3px #ccc;
+    border-left: 3px solid #335efc;
+}
+.table-balance-modal::-webkit-scrollbar {
+    display: none;
+}
+.table-balance{
+    position: absolute;
+    display: table;
+    width: 100%;
+}
+
+.table_balance_th{
+    position: sticky;
+    top:0;
+    background: rgba(224, 224, 224, 0.95);
+
+}
+
+.table_balance_td{
+    background: rgba(239, 239, 239, 0.95);
+}

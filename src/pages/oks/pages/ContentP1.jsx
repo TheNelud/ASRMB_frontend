@@ -1,7 +1,7 @@
 import React from 'react'
-import TableItems from "../../../components/oks/table/TableItems";
+// import TableItems from "../../../components/oks/table/TableItems";
 import Dock from "../../../components/dock/Dock";
-import Plotly from "../../../components/oks/plotly/Plotly";
+// import Plotly from "../../../components/oks/plotly/Plotly";
 // import TableDataSheet from "../../../components/oks/table/TableDataSheet";
 
 
@@ -94,8 +94,8 @@ const ContentP1 = () => {
 
         <div className="conteiner-content">
 
-            <TableItems key={items_p1.id} items={items_p1} setItems_p1={setItems_p1} title_table={title_table[0]} />
-            <Dock click_filter={filterDate} click_save={updateItemsP1} click_create={createItemsP1} click_delete={deleteItemsP1}/>
+            {/*<TableItems key={items_p1.id} items={items_p1} setItems_p1={setItems_p1} title_table={title_table[0]} />*/}
+            {/*<Dock click_filter={filterDate} click_save={updateItemsP1} click_create={createItemsP1} click_delete={deleteItemsP1}/>*/}
 
         </div>
     )

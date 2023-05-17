@@ -1,5 +1,5 @@
 import React from 'react'
-import TableItems from "../../../components/oks/table/TableItems";
+// import TableItems from "../../../components/oks/table/TableItems";
 import Dock from "../../../components/dock/Dock";
 // import './style.css';
 
@@ -24,8 +24,8 @@ const ContentP8 = () => {
     return(
 
         <div className="conteiner-content">
-            <TableItems key={items_p8.id} items={items_p8} title_table={title_table[0]}/>
-            <Dock/>
+            {/*<TableItems key={items_p8.id} items={items_p8} title_table={title_table[0]}/>*/}
+            {/*<Dock/>*/}
         </div>
     )
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import './style.scss'
 
-const CheckBoxTable = ( {checkHandler, isCheckedTech} ) => {
+const CheckBoxTable = ( {checkHandlerTech, isCheckedTech, checkHandlerBalance,
+                        isCheckedBalance} ) => {
 
 
     return(
@@ -9,7 +10,7 @@ const CheckBoxTable = ( {checkHandler, isCheckedTech} ) => {
         <div className='checkbox-group'>
             <div className="checkbox">
                 <label className="checkbox-wrapper">
-                    <input type="checkbox" className="checkbox-input"/>
+                    <input type="checkbox" className="checkbox-input" checked={isCheckedBalance} onChange={checkHandlerBalance}/>
                     <span className="checkbox-tile">
 				    <span className="checkbox-label">Материальный баланс</span>
 			    </span>
@@ -18,7 +19,7 @@ const CheckBoxTable = ( {checkHandler, isCheckedTech} ) => {
 
             <div className="checkbox">
                 <label className="checkbox-wrapper">
-                    <input type="checkbox" id='checkTech' className="checkbox-input" checked={isCheckedTech} onChange={checkHandler}/>
+                    <input type="checkbox" id='checkTech' className="checkbox-input" checked={isCheckedTech} onChange={checkHandlerTech}/>
                     <span className="checkbox-tile">
 				    <span className="checkbox-label">Датчиковое оборудование</span>
 			    </span>

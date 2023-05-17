@@ -2,13 +2,78 @@ import React from 'react'
 import Draggable from 'react-draggable';
 
 import './style.css';
-import {json} from "react-router-dom";
-import TableItems from "../../components/oks/table/TableItems";
 import BtnFilterGrid from "../../components/filter_grid/BtnFilterGrid";
-// import {ReactComponent as IconCreate} from "../../components/dock/assets/icon-create.svg";
+import CheckBoxTable from "./tables/CheckBoxTable";
+import TableApp1 from "./tables/tableApp1/TableApp1";
+
+
+
+
 
 const Contents_OKS = () => {
 
+
+    //Select checkbox table
+    const [isClickBtnTableOks, setClickBtnTableOks] = React.useState(false)
+
+    const [isCheckBoxP1, setCheckBoxP1] = React.useState(false)
+    const [isCheckBoxP2, setCheckBoxP2] = React.useState(false)
+    const [isCheckBoxP3, setCheckBoxP3] = React.useState(false)
+    const [isCheckBoxP4, setCheckBoxP4] = React.useState(false)
+    const [isCheckBoxP5, setCheckBoxP5] = React.useState(false)
+    const [isCheckBoxP6, setCheckBoxP6] = React.useState(false)
+    const [isCheckBoxP7, setCheckBoxP7] = React.useState(false)
+    const [isCheckBoxP8, setCheckBoxP8] = React.useState(false)
+    const [isCheckBoxP9, setCheckBoxP9] = React.useState(false)
+    const [isCheckBoxP10, setCheckBoxP10] = React.useState(false)
+
+    const checkBtnHendler = () => {setClickBtnTableOks(!isClickBtnTableOks);save_positions_oks();}
+    const checkHandelerP1 = () => {setCheckBoxP1(!isCheckBoxP1);save_positions_oks();}
+    const checkHandelerP2 = () => {setCheckBoxP2(!isCheckBoxP2);save_positions_oks();}
+    const checkHandelerP3 = () => {setCheckBoxP3(!isCheckBoxP3);save_positions_oks();}
+    const checkHandelerP4 = () => {setCheckBoxP4(!isCheckBoxP4);save_positions_oks();}
+    const checkHandelerP5 = () => {setCheckBoxP5(!isCheckBoxP5);save_positions_oks();}
+    const checkHandelerP6 = () => {setCheckBoxP6(!isCheckBoxP6);save_positions_oks();}
+    const checkHandelerP7 = () => {setCheckBoxP7(!isCheckBoxP7);save_positions_oks();}
+    const checkHandelerP8 = () => {setCheckBoxP8(!isCheckBoxP8);save_positions_oks();}
+    const checkHandelerP9 = () => {setCheckBoxP9(!isCheckBoxP9);save_positions_oks();}
+    const checkHandelerP10 = () => {setCheckBoxP10(!isCheckBoxP10);save_positions_oks();}
+
+    const show_tables = {'p1':isCheckBoxP1,'p2':isCheckBoxP2,'p3':isCheckBoxP3,'p4':isCheckBoxP4,'p5':isCheckBoxP5,
+    'p6':isCheckBoxP6,'p7':isCheckBoxP7,'p8':isCheckBoxP8,'p9':isCheckBoxP9,'p10':isCheckBoxP10}
+
+    let showSelectCheckBox =()=>{
+        return(
+            <CheckBoxTable
+                    isClickBtnTableOks={isClickBtnTableOks}
+                    isCheckBoxP1={isCheckBoxP1}
+                    isCheckBoxP2={isCheckBoxP2}
+                    isCheckBoxP3={isCheckBoxP3}
+                    isCheckBoxP4={isCheckBoxP4}
+                    isCheckBoxP5={isCheckBoxP5}
+                    isCheckBoxP6={isCheckBoxP6}
+                    isCheckBoxP7={isCheckBoxP7}
+                    isCheckBoxP8={isCheckBoxP8}
+                    isCheckBoxP9={isCheckBoxP9}
+                    isCheckBoxP10={isCheckBoxP10}
+                    checkBtnHendler={checkBtnHendler}
+                    checkHandelerP1={checkHandelerP1}
+                    checkHandelerP2={checkHandelerP2}
+                    checkHandelerP3={checkHandelerP3}
+                    checkHandelerP4={checkHandelerP4}
+                    checkHandelerP5={checkHandelerP5}
+                    checkHandelerP6={checkHandelerP6}
+                    checkHandelerP7={checkHandelerP7}
+                    checkHandelerP8={checkHandelerP8}
+                    checkHandelerP9={checkHandelerP9}
+                    checkHandelerP10={checkHandelerP10}
+
+            />
+        )
+    }
+
+
+    //Position table in area
     const [p1, setP1] = React.useState([0,0])
     const [p2, setP2] = React.useState([0,0])
     const [p3, setP3] = React.useState([0,0])
@@ -67,24 +132,43 @@ const Contents_OKS = () => {
 
     React.useEffect(()=>{
         get_positions_oks()
-        get_full_oks()
     },[])
 
     let get_positions_oks = async ()=>{
             let response = await fetch('/setting/oks/')
             let data = await response.json()
-            let str_data = data[0]['coordinate'].replace(/'/ig, '"')
-            let json_data = JSON.parse(str_data)
-            setP1([json_data['p1'][0],json_data['p1'][1]])
-            setP2([json_data['p2'][0],json_data['p2'][1]])
-            setP3([json_data['p3'][0],json_data['p3'][1]])
-            setP4([json_data['p4'][0],json_data['p4'][1]])
-            setP5([json_data['p5'][0],json_data['p5'][1]])
-            setP6([json_data['p6'][0],json_data['p6'][1]])
-            setP7([json_data['p7'][0],json_data['p7'][1]])
-            setP8([json_data['p8'][0],json_data['p8'][1]])
-            setP9([json_data['p9'][0],json_data['p9'][1]])
-            setP10([json_data['p10'][0],json_data['p10'][1]])
+            console.log(data)
+            let str_data_coordinate = data[0]['coordinate'].replace(/'/ig, '"')
+            let str_data_show_table = data[0]['show_tables'].replace(/'/ig, '"').toLowerCase()
+            console.log(str_data_coordinate)
+            console.log(str_data_show_table)
+            let json_data_coordinate = JSON.parse(str_data_coordinate)
+            let json_data_show_table = JSON.parse(str_data_show_table)
+            console.log(json_data_show_table)
+
+
+            setP1([json_data_coordinate['p1'][0],json_data_coordinate['p1'][1]])
+            setP2([json_data_coordinate['p2'][0],json_data_coordinate['p2'][1]])
+            setP3([json_data_coordinate['p3'][0],json_data_coordinate['p3'][1]])
+            setP4([json_data_coordinate['p4'][0],json_data_coordinate['p4'][1]])
+            setP5([json_data_coordinate['p5'][0],json_data_coordinate['p5'][1]])
+            setP6([json_data_coordinate['p6'][0],json_data_coordinate['p6'][1]])
+            setP7([json_data_coordinate['p7'][0],json_data_coordinate['p7'][1]])
+            setP8([json_data_coordinate['p8'][0],json_data_coordinate['p8'][1]])
+            setP9([json_data_coordinate['p9'][0],json_data_coordinate['p9'][1]])
+            setP10([json_data_coordinate['p10'][0],json_data_coordinate['p10'][1]])
+
+            setCheckBoxP1(json_data_show_table['p1'])
+            setCheckBoxP1(json_data_show_table['p2'])
+            setCheckBoxP2(json_data_show_table['p3'])
+            setCheckBoxP3(json_data_show_table['p4'])
+            setCheckBoxP4(json_data_show_table['p5'])
+            setCheckBoxP5(json_data_show_table['p5'])
+            setCheckBoxP6(json_data_show_table['p6'])
+            setCheckBoxP7(json_data_show_table['p7'])
+            setCheckBoxP8(json_data_show_table['p8'])
+            setCheckBoxP9(json_data_show_table['p9'])
+            setCheckBoxP10(json_data_show_table['p10'])
         }
 
     let save_positions_oks = async ()=>{
@@ -94,21 +178,11 @@ const Contents_OKS = () => {
             headers:{
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify({coordinate})
+            body:JSON.stringify({coordinate, show_tables})
         })
     }
 
-    //Table data
-    let [items_p1, setItems_p1] = React.useState([])
-    let [items_p2, setItems_p2] = React.useState([])
-    let [items_p3, setItems_p3] = React.useState([])
-    let [items_p4, setItems_p4] = React.useState([])
-    let [items_p5, setItems_p5] = React.useState([])
-    let [items_p6, setItems_p6] = React.useState([])
-    let [items_p7, setItems_p7] = React.useState([])
-    let [items_p8, setItems_p8] = React.useState([])
-    let [items_p9, setItems_p9] = React.useState([])
-    let [items_p10, setItems_p10] = React.useState([])
+
     let title_table = [
         'Протокол анализа №09-2021 PVT(К)',
         'протокол № 05 - PVT(Г)',
@@ -122,76 +196,29 @@ const Contents_OKS = () => {
         'КГН Протокол 09-2021 PVT (К)'
     ]
 
-    const get_full_oks =async () => {
-        let response = await fetch('/oks/full/api/')
-        let data = await response.json()
-        setItems_p1(data['oks_p1'])
-        setItems_p2(data['oks_p2'])
-        setItems_p3(data['oks_p3'])
-        setItems_p4(data['oks_p4'])
-        setItems_p5(data['oks_p5'])
-        setItems_p6(data['oks_p6'])
-        setItems_p7(data['oks_p7'])
-        setItems_p8(data['oks_p8'])
-        setItems_p9(data['oks_p9'])
-        setItems_p10(data['oks_p10'])
+    let showTableP1 = () => {
+        if (isCheckBoxP1){
+            return(
+                <Draggable  onStop={handleStopP1} position={{x:p1[0],y:p1[1]}}>
+                    <div id='p1' className='conteiner_p'>
+                        <TableApp1 title_table={title_table[0]}/>
+                    </div>
+                </Draggable>
+            )
+        }
     }
+
+
 
     return(
         <div className="conteiner-content">
 
             <div className='conteiner_all'>
                 <BtnFilterGrid onClickGridHorizonal={onClickGridHorizonal} onClickGridVertical={onClickGridVertical} />
-                <Draggable  onStop={handleStopP1} position={{x:p1[0],y:p1[1]}}>
-                    <div id='p1' className='conteiner_p'>
-                        <TableItems key={items_p1.id} items={items_p1} title_table={title_table[0]}/>
-                    </div>
-                </Draggable>
-                <Draggable onStop={handleStopP2} position={{x:p2[0],y:p2[1]}}>
-                    <div id='p2' className='conteiner_p'>
-                        <TableItems key={items_p2.id} items={items_p2} title_table={title_table[1]}/>
-                    </div>
-                </Draggable>
-                <Draggable onStop={handleStopP3} position={{x:p3[0],y:p3[1]}}>
-                    <div id='p3' className='conteiner_p'>
-                        <TableItems key={items_p3.id} items={items_p3} title_table={title_table[2]}/>
-                    </div>
-                </Draggable>
-                <Draggable  onStop={handleStopP4} position={{x:p4[0],y:p4[1]}}>
-                    <div id='p4' className='conteiner_p'>
-                        <TableItems key={items_p4.id} items={items_p4} title_table={title_table[3]}/>
-                    </div>
-                </Draggable>
-                <Draggable onStop={handleStopP5} position={{x:p5[0],y:p5[1]}}>
-                    <div id='p5' className='conteiner_p'>
-                        <TableItems key={items_p5.id} items={items_p5} title_table={title_table[4]}/>
-                    </div>
-                </Draggable>
-                <Draggable  onStop={handleStopP6} position={{x:p6[0],y:p6[1]}}>
-                    <div id='p6' className='conteiner_p'>
-                        <TableItems key={items_p6.id} items={items_p6} title_table={title_table[5]}/>
-                    </div>
-                </Draggable>
-                <Draggable onStop={handleStopP7} position={{x:p7[0],y:p7[1]}}>
-                    <div id='p7' className='conteiner_p'>
-                        <TableItems key={items_p7.id} items={items_p7} title_table={title_table[6]}/>
-                    </div>
-                </Draggable>
-                <Draggable onStop={handleStopP8} position={{x:p8[0],y:p8[1]}}>
-                    <div id='p8' className='conteiner_p'>
-                        <TableItems key={items_p8.id} items={items_p8} title_table={title_table[7]}/>
-                    </div>
-                </Draggable>
-                <Draggable  onStop={handleStopP9} position={{x:p9[0],y:p9[1]}}>
-                    <div id='p9' className='conteiner_p'>
-                        <TableItems key={items_p9.id} items={items_p9} title_table={title_table[8]}/>
-                    </div>
-                </Draggable>
-                <Draggable onStop={handleStopP10} position={{x:p10[0],y:p10[1]}}>
-                    <div id='p10' className='conteiner_p'>
-                        <TableItems key={items_p10.id} items={items_p10} title_table={title_table[9]}/>
-                    </div>
-                </Draggable>
+                {showSelectCheckBox()}
+
+                {showTableP1()}
+
             </div>
 
         </div>
