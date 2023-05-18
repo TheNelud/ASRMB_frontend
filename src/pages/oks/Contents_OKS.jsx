@@ -5,6 +5,7 @@ import './style.css';
 import BtnFilterGrid from "../../components/filter_grid/BtnFilterGrid";
 import CheckBoxTable from "./tables/CheckBoxTable";
 import TableApp1 from "./tables/tableApp1/TableApp1";
+import TableApp2 from "./tables/tableApp2/TableApp2";
 
 
 
@@ -137,14 +138,12 @@ const Contents_OKS = () => {
     let get_positions_oks = async ()=>{
             let response = await fetch('/setting/oks/')
             let data = await response.json()
-            console.log(data)
+
             let str_data_coordinate = data[0]['coordinate'].replace(/'/ig, '"')
             let str_data_show_table = data[0]['show_tables'].replace(/'/ig, '"').toLowerCase()
-            console.log(str_data_coordinate)
-            console.log(str_data_show_table)
+
             let json_data_coordinate = JSON.parse(str_data_coordinate)
             let json_data_show_table = JSON.parse(str_data_show_table)
-            console.log(json_data_show_table)
 
 
             setP1([json_data_coordinate['p1'][0],json_data_coordinate['p1'][1]])
@@ -159,10 +158,9 @@ const Contents_OKS = () => {
             setP10([json_data_coordinate['p10'][0],json_data_coordinate['p10'][1]])
 
             setCheckBoxP1(json_data_show_table['p1'])
-            setCheckBoxP1(json_data_show_table['p2'])
-            setCheckBoxP2(json_data_show_table['p3'])
-            setCheckBoxP3(json_data_show_table['p4'])
-            setCheckBoxP4(json_data_show_table['p5'])
+            setCheckBoxP2(json_data_show_table['p2'])
+            setCheckBoxP3(json_data_show_table['p3'])
+            setCheckBoxP4(json_data_show_table['p4'])
             setCheckBoxP5(json_data_show_table['p5'])
             setCheckBoxP6(json_data_show_table['p6'])
             setCheckBoxP7(json_data_show_table['p7'])
@@ -196,6 +194,22 @@ const Contents_OKS = () => {
         'КГН Протокол 09-2021 PVT (К)'
     ]
 
+    let showTable = (show_tables) =>{
+        for (let i=0;i <= show_tables.length; i++){
+            console.log(i)
+            if (i.value){
+                return(
+                    <Draggable  onStop={handleStopP1} position={{x:p1[0],y:p1[1]}}>
+                        <div id='p1' className='conteiner_p'>
+                            <TableApp1 title_table={title_table[0]}/>
+                        </div>
+                    </Draggable>
+                )
+        }
+
+        }
+    }
+
     let showTableP1 = () => {
         if (isCheckBoxP1){
             return(
@@ -207,6 +221,17 @@ const Contents_OKS = () => {
             )
         }
     }
+    // let showTableP2 = () => {
+    //     if (isCheckBoxP2){
+    //         return(
+    //             <Draggable  onStop={handleStopP2} position={{x:p2[0],y:p2[1]}}>
+    //                 <div id='p2' className='conteiner_p'>
+    //                     <TableApp2 title_table={title_table[1]}/>
+    //                 </div>
+    //             </Draggable>
+    //         )
+    //     }
+    // }
 
 
 
@@ -214,10 +239,12 @@ const Contents_OKS = () => {
         <div className="conteiner-content">
 
             <div className='conteiner_all'>
-                <BtnFilterGrid onClickGridHorizonal={onClickGridHorizonal} onClickGridVertical={onClickGridVertical} />
                 {showSelectCheckBox()}
+                <BtnFilterGrid onClickGridHorizonal={onClickGridHorizonal} onClickGridVertical={onClickGridVertical} />
 
-                {showTableP1()}
+                {showTable(show_tables)}
+                {/*{showTableP1()}*/}
+                {/*{showTableP2()}*/}
 
             </div>
 

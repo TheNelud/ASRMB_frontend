@@ -2,24 +2,24 @@ import React from 'react'
 import './style.css'
 
 
-function TableApp1({title_table}) {
-    let [items_p1, setItems_p1] = React.useState([])
+function TableApp2({title_table}) {
+    let [items_p2, setItems_p2] = React.useState([])
 
-    // React.useEffect( () => {
-    //     getItemsP1()
-    // }, [])
-    //
-    // let getItemsP1 = async () => {
-    //     let response = await fetch('/oks/p1/api/')
-    //         .then(response=>{
-    //             if(!response.ok) throw new Error(`Ошибка: ${response.status}`)
-    //             return response.json()
-    //         })
-    //         .then(data => console.log(data))
-    //         .catch(error => console.error(error.message))
-    //     let data = await response.json()
-    //     setItems_p1(data)
-    // }
+    React.useEffect( () => {
+        getItemsp2()
+    }, [])
+
+    let getItemsp2 = async () => {
+        let response = await fetch('/oks/p2/api/')
+            .then(response=>{
+                if(!response.ok) throw new Error(`Ошибка: ${response.status}`)
+                return response.json()
+            })
+            .then(data => console.log(data))
+            .catch(error => console.error(error.message))
+        let data = await response.json()
+        setItems_p2(data)
+    }
 
     return(
 
@@ -43,7 +43,7 @@ function TableApp1({title_table}) {
                 </tr>
                 </thead>
             <tbody>
-            {items_p1.map((item, key) => {
+            {items_p2.map((item, key) => {
                  return(
                   <tr key={key}>
                       <td className='input-content'><input
@@ -91,4 +91,4 @@ function TableApp1({title_table}) {
   )
 }
 
-export default TableApp1
+export default TableApp2

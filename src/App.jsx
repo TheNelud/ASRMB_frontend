@@ -20,6 +20,7 @@ import ContentP10 from "./pages/oks/pages/ContentP10";
 import Sar from "./pages/sar/Sar";
 import Mar from "./pages/mar/Mar";
 import Mag from "./pages/mag/Mag";
+import Content_srk from "./pages/srk/Content_srk";
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
                 <Route path='/sar' element={<Sar/>}/>
                 <Route path='/mar' element={<Mar/>}/>
                 <Route path='/mag' element={<Mag/>}/>
+
+                <Route path='srk' element={<Content_srk/>}/>
 
             </Routes>
         </Router>
