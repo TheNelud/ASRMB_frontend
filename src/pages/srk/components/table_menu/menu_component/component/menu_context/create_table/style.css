@@ -1,0 +1,6 @@
+.hide-creator-table{
+    display: none;
+}
+.show-creator-table{
+    display: block;
+}

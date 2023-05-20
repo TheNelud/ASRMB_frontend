@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 
-let ShowTable = ({row, column}) =>{
+let ShowTable = ({count, row, column}) =>{
 
     let row_matrix_head = []
     let column_matrix_head = []
@@ -25,22 +25,21 @@ let ShowTable = ({row, column}) =>{
         for (let i=0; i< column; i++){
             column_matrix_body.push(<tr>{row_matrix_body}</tr>)
         }
-
-        console.log(column_matrix_body)
-
         return column_matrix_body
     }
 
+
     return(
-        <table>
+        <table className='style-table-creator' key={count}>
             <thead>
                 {showHead()}
             </thead>
             <tbody>
                 {showBody()}
             </tbody>
-
         </table>
+
+
     )
 }
 

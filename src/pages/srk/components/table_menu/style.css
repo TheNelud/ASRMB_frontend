@@ -3,8 +3,17 @@
     display: block;
     top:7%;
     left: 2%;
+    width: 200px;
 }
 
 .style-btn-menu{
-
+    background: #e0e0e0;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid rgba(26, 134, 241, 0);
+    box-shadow: 1px 1px 2px 2px #ccc;
+}
+.style-btn-menu:hover{
+    border-color: rgba(80, 80, 80, 0.2);
+    transition: 0.2s;
 }

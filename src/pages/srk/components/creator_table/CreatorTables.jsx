@@ -1,22 +1,25 @@
 import React from "react";
+import Draggable from 'react-draggable';
+import SpeedSheet from "./speedrsheet/SpeedSheet";
 import './style.css'
-import ShowTable from "./components/showTable/ShowTable";
 
-let CreatorTables = () =>{
-    let [isRow, setRow] = React.useState(0)
-    let [isColunm, setColunm] = React.useState(0)
 
-    let onChangeRow=(event)=>{setRow(event.target.value);}
-    let onChangeColumn=(event)=>{setColunm(event.target.value);}
+
+
+let CreatorTables = ({key,count, isRow, isColumn}) =>{
+
+    let [isPosition, setPosition] = React.useState([100,100])
+    let handleStop = (event, dragElement) => {setPosition([dragElement.x, dragElement.y]);}
 
     return(
-        <div className='style-creator-tables'>
-            <label>Столбцы</label><input className='row-input' type='number' value={isRow} onChange={onChangeRow}></input>
-            <label>Строки</label><input className='colunm-input' type='number' value={isColunm} onChange={onChangeColumn}></input>
-
-
-            <ShowTable row={isRow} column={isColunm}/>
+        <div key={count} id={`div-table-${count}`}>
+            <Draggable onStop={handleStop} position={{x:isPosition[0],y:isPosition[1]}}>
+                <div className='style-creator-tables'>
+                    <SpeedSheet  key={count} row={isRow} column={isColumn}/>
+                </div>
+            </Draggable>
         </div>
+
     )
 }
 
