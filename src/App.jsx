@@ -21,13 +21,14 @@ import Sar from "./pages/sar/Sar";
 import Mar from "./pages/mar/Mar";
 import Mag from "./pages/mag/Mag";
 import Content_srk from "./pages/srk/Content_srk";
+import Constructor from "./pages/constructor/Constructor";
 
 
 function App() {
     let [state_sidebar, setStateSidebar] = React.useState(false)
 
   return (
-    <div className="App">
+    <div className="App"    >
         <Router>
             <Navbar setStateSidebar={setStateSidebar} />
             <Sidebar state_sidebar={state_sidebar} setStateSidebar={setStateSidebar}/>
@@ -50,6 +51,8 @@ function App() {
                 <Route path='/mag' element={<Mag/>}/>
 
                 <Route path='srk' element={<Content_srk/>}/>
+
+                <Route path='constructor' element={<Constructor/>}/>
 
             </Routes>
         </Router>

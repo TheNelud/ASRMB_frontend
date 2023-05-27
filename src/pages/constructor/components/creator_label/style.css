@@ -1,0 +1,25 @@
+.context-label-menu{
+    position: fixed;
+    display: inline-table;
+    top: 40%;
+    left: 1.5%;
+    height: 57%;
+    width: 11.9%;
+    background: rgba(114, 114, 114, 0.17);
+    border-radius: 10px;
+}
+
+.input-content-label, .input-fontsize-label{
+    float: right;
+}
+.input-content-label{
+    width: 70%;
+}
+.input-fontsize-label{
+    width: 30%;
+}
+
+.input-color-label, .input-background-label{
+    margin: 0.4rem;
+    float: right;
+}

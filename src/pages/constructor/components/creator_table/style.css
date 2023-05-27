@@ -1,0 +1,16 @@
+
+.style-creator-tables{
+    position: fixed;
+    display: block;
+    top:10%;
+    left: 10%;
+    width: 90%;
+    background: #727272;
+}
+
+.show-table{
+    display: block;
+}
+.hide-table{
+    display: none;
+}

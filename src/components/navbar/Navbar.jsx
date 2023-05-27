@@ -36,6 +36,7 @@ const Navbar = ({setStateSidebar}) => {
                         </div>
                     </div>
                 </li>
+                <li><NavLink to='/constructor' >Конструктор</NavLink></li>
 
                 <li>
                     <div className='dropdown nav-personal'>

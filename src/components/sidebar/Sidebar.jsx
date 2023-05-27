@@ -6,6 +6,8 @@ import {NavLink, Route, Router, Routes} from "react-router-dom";
 import SidebarOks from "../../pages/oks/SidebarOks";
 
 
+
+
 const Sidebar = ({state_sidebar, setStateSidebar}) => {
 
     return (
@@ -26,6 +28,7 @@ const Sidebar = ({state_sidebar, setStateSidebar}) => {
                     <Route path='/oks/p8' element={<SidebarOks/>}/>
                     <Route path='/oks/p9' element={<SidebarOks/>}/>
                     <Route path='/oks/p10' element={<SidebarOks/>}/>
+
                 </Routes>
 
             </div>
