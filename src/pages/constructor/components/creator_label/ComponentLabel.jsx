@@ -7,7 +7,6 @@ let ComponentLabel = ({count_label}) =>{
 
     let [isPosition, setPosition] = React.useState([0,0])
     let handleStop = (event, dragElement) => {setPosition([dragElement.x, dragElement.y]);}
-    let [showContextMenu, setShowContextMenu] = React.useState(false)
 
     // ===============================================================================>  Фунционал
 
@@ -26,6 +25,7 @@ let ComponentLabel = ({count_label}) =>{
 
 
     // ===============================================================================>  Контекстное меню
+    let [showContextMenu, setShowContextMenu] = React.useState(false)
     let onContextMenu = (event) => {
         event.preventDefault();
         console.log(`CLick context menu x:${event.clientX}, y: ${event.clientY}`)
@@ -51,7 +51,7 @@ let ComponentLabel = ({count_label}) =>{
             <div className={showContextMenu ? 'show-context-menu' : 'hide-context-menu'} >
                 <div className='context-label-menu'>
                     <div>
-                        <label htmlFor={`label_content_${count_label}`}>Контент</label>
+                        <label htmlFor={`label_content_${count_label}`}>Текст</label>
                         <input className={`input-content-label`} id={`label_content_${count_label}`} name={`label_content_${count_label}`} type='text' placeholder='Ввод' onChange={onChangeText}/>
                     </div>
                     <hr/>

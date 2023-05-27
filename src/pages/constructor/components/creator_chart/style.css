@@ -1,0 +1,10 @@
+.context-chart-menu{
+    position: fixed;
+    display: inline-table;
+    top: 40%;
+    left: 1.5%;
+    height: 57%;
+    width: 225px;
+    background: rgba(114, 114, 114, 0.17);
+    border-radius: 10px;
+}

@@ -7,6 +7,7 @@ import ComponentTable from "./components/creator_table/ComponentTable";
 
 import './style.css'
 import ComponentLabel from "./components/creator_label/ComponentLabel";
+import ComponentChart from "./components/creator_chart/ComponentChart";
 
 
 let Constructor = () =>{
@@ -26,6 +27,10 @@ let Constructor = () =>{
     // LableContent
     let [isLabelComponents, setLabelComponents] =React.useState([])
     let arr_label = Object.assign([], isLabelComponents);
+
+    // ChartContent
+    let [isChartComponents, setChartComponents] =React.useState([])
+    let arr_chart = Object.assign([], isChartComponents);
 
     let onClickAddTable = () => {
         console.log('CLICK BUTTON ADD TABLE')
@@ -48,7 +53,9 @@ let Constructor = () =>{
     let onClickAddChart = () =>{
         console.log('CLICK BUTTON ADD Chart')
         arr_menu_full.push(component_chart_menu)
+        arr_chart.push(component_chart)
         setMenuComponents(arr_menu_full)
+        setChartComponents(arr_chart)
         setCountChart(count_chart+1)
     }
 
@@ -56,8 +63,10 @@ let Constructor = () =>{
     let component_label_menu = <ComponentMenuLabel count_label={count_label}/>
     let component_chart_menu = <ComponentMenuChart count_chart={count_chart}/>
 
-    let component_table =<ComponentTable key={`component_${count}`} count={count} />
-    let component_label = <ComponentLabel ket={`label+${count_label}`} count_label={count_label}/>
+    let component_table =<ComponentTable key={`table_${count}`} count={count} />
+    let component_label = <ComponentLabel key={`label_${count_label}`} count_label={count_label}/>
+    let component_chart = <ComponentChart key={`chart_${count_chart}`} count_chart={count_chart}/>
+
 
     return (
         <div>
@@ -85,6 +94,7 @@ let Constructor = () =>{
                 <div className='dotted'>
                     {isTableComponents}
                     {isLabelComponents}
+                    {isChartComponents}
                 </div>
 
 
